@@ -37,17 +37,11 @@
             border: 8px solid #6BCC66;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="text" id="dynamicText">CALCULANDO...</div>
-    </div>
-    <iframe src="https://record.elephantbet.com/_rbXIYyWpV7wWqcfzuvZcQGNd7ZgqdRLk/1/"></iframe>
     <script>
-        // Check if the user has visited "mais.html"
-        if (!localStorage.getItem('visitedMaisHtml')) {
-            // If not, redirect to "main.html"
-            window.location.href = 'main.html';
+        // Check if the user accessed index.html
+        if (!localStorage.getItem('accessedIndex')) {
+            // If not, redirect to index.html
+            window.location.href = 'index.html';
         }
 
         const texts = ["POSSÍVEL AZUL", "POSSÍVEL ROXO", "POSSÍVEL ROSA"];
@@ -57,7 +51,13 @@
             document.getElementById("dynamicText").innerText = texts[randomIndex];
         }
 
-        setInterval(changeText, 16000); // 27000 ms = 27 segundos
+        setInterval(changeText, 16000); // 16000 ms = 16 seconds
     </script>
+</head>
+<body>
+    <div class="container">
+        <div class="text" id="dynamicText">CALCULANDO...</div>
+    </div>
+    <iframe src="https://record.elephantbet.com/_rbXIYyWpV7wWqcfzuvZcQGNd7ZgqdRLk/1/"></iframe>
 </body>
 </html>
