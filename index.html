@@ -4,134 +4,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PAÍS</title>
+  <title>BOT HUNTER AVIATOR</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #5ADFC6, #3E87F3);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .country-img {
+      
+      width: 100px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .country-img:hover {
+      transform: scale(1.05);
+    }
+
+    #dialogOverlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    #dialog {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      background: #fff;
+      z-index: 1000;
+      text-align: center;
+      max-width: 400px;
+      width: 80%;
+    }
+
+    .dialog-header {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .dialog-body {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .dialog-footer {
+      text-align: center;
+    }
+
+    .dialog-button {
+      padding: 10px 20px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dialog-button:hover {
+      background: #0056b3;
+    }
+
+    .price-info {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .buy-button {
+      padding: 10px 20px;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .buy-button:hover {
+      background: #218838;
+    }
+    
+    #pa {
+      background: #21222B;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      width: 100px;
+      padding: 20px;
+    }
+  </style>
 </head>
 
-<style>
-
-body {
-  background: #5ADFC6;
-  align-items: center;
-  
-}
-
-#png {
-  
-  border-radius: 20px;
-  width: 50%;
-  margin-top: 50px;
-  
-}
-
-#dialog {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 8px;
-            border: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            background: #fff;
-            z-index: 1000;
-            text-align: center;
-            max-width: 400px;
-            width: 80%;
-        }
-        #dialogOverlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        .dialog-header {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        .dialog-body {
-            margin-bottom: 20px;
-            font-size: 16px;
-            color: #666;
-        }
-        .dialog-footer {
-            text-align: center;
-        }
-        .dialog-button {
-            padding: 10px 20px;
-            background: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .dialog-button:hover {
-            background: #0056b3;
-        }
-  
-  
-  
- 
-</style>
-
 <body>
-  
-<center><h1 style=" font-size: 20px">SEJA BEM VINDO AO BOT HUNTER</h1></center>
-<center><h2 style=" color: red">ESCOLHA O SEU PAÍS PARA JOGAR AVIATOR COM O BOT HUNTER</h2></center>
 
+  <h1>SEJA BEM VINDO AO BOT HUNTER</h1>
+  <h2 style="color: white; font-weight: bold; font-size: 15px">ESCOLHA O SEU PAÍS PARA JOGAR AVIATOR COM O BOT HUNTER</h2>
 
-  
-  <picture>
-    <center><img id="png" onclick="moz()" src="moz.jpeg" alt="BOT HUNTER MOZ"></center>
+  <div id="pa">
     
-    <center><img id="png" onclick="ango()" src="ango.jpeg" alt="BOT HUNTER ANGOLA"></center>
-  </picture>
-  
-  <div id="dialogOverlay"></div>
-    <div id="dialog">
-        <div class="dialog-header">MÉTODO DE USO</div>
-        <div class="dialog-body">Cria uma nova conta no bot para que o bot seja acertivo</div>
-        <div class="dialog-footer">
-            <button class="dialog-button" id="okBtn">OK</button>
-        </div>
-    </div>
+    <img class="country-img" id="moz" onclick="moz()" src="moz.jpeg" alt="BOT HUNTER MOZ">
+    <center><h style="color: white">BOT HUNTER MOZ</h></center>
+  </div>
+  <div id="pa">
+   <img class="country-img" id="ango" onclick="ango()" src="ango.jpeg" alt="BOT HUNTER ANGOLA"> 
+    <center><h style="color: white">BOT HUNTER ANGO</h></center>
+  </div>
 
+  <div class="price-info">Preço do manual do bot: 250MT</div>
+  <button onclick="sap()" class="buy-button">Comprar Manual</button>
+
+  <div id="dialogOverlay"></div>
+  <div id="dialog">
+    <div class="dialog-header">MÉTODO DE USO</div>
+    <div class="dialog-body">Crie uma nova conta no bot para que o bot seja assertivo, se não esta adiantando em nada compre o manual por apenas 250MT </div>
+    <div class="dialog-footer">
+      <button class="dialog-button" id="okBtn">OK</button>
+    </div>
+  </div>
 
   <script>
-  
-window.addEventListener('load', function() {
-      document.getElementById('dialog').style.display = 'block';
-      document.getElementById('dialogOverlay').style.display = 'block';
-    });
-    
-    document.getElementById('okBtn').addEventListener('click', function() {
+    const veri = "esa"; // Aqui deve estar a lógica correta para a verificação
+
+    if (veri !== "esta") {
+      window.addEventListener('load', function () {
+        document.getElementById('dialog').style.display = 'block';
+        document.getElementById('dialogOverlay').style.display = 'block';
+      });
+    }
+
+    document.getElementById('okBtn').addEventListener('click', function () {
       document.getElementById('dialog').style.display = 'none';
       document.getElementById('dialogOverlay').style.display = 'none';
     });
-    
-    document.getElementById('dialogOverlay').addEventListener('click', function() {
+
+    document.getElementById('dialogOverlay').addEventListener('click', function () {
       document.getElementById('dialog').style.display = 'none';
       document.getElementById('dialogOverlay').style.display = 'none';
     });
-  
-    
+
     function moz() {
-      window.location.href = "moz.html"
+      window.location.href = "moz.html";
+    }
+
+    function ango() {
+      window.location.href = "ango.html";
     }
     
-    function ango() {
-      window.location.href = "ango.html"
+    function sap() {
+    window.open("https://wa.me/258878530996")
     }
   </script>
-
 
 </body>
 
