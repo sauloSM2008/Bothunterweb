@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOT HUNTER</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background: linear-gradient(to bottom, #3E87F3, #ffc3a0);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 5px solid #667DCC;
+        }
+        .text {
+            font-size: 24px;
+            color: #333;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 50px); /* Adjusted height to fit below the text container */
+            border: none;
+            border-radius: 0 0 10px 10px;
+            border: 8px solid #6BCC66;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text" id="dynamicText">CALCULANDO...</div>
+    </div>
+    <iframe src="https://record.elephantbet.com/_rbXIYyWpV7wWqcfzuvZcQGNd7ZgqdRLk/1/"></iframe>
+    <script>
+      
+
+        const texts = ["POSSÍVEL AZUL", "POSSÍVEL ROXO", "POSSÍVEL ROSA"];
+
+        function changeText() {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById("dynamicText").innerText = texts[randomIndex];
+        }
+
+        setInterval(changeText, 16000); // 27000 ms = 27 segundos
+    </script>
+</body>
+</html>

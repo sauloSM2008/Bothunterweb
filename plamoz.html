@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOT HUNTER MOZ</title>
+    <title>BOT HUNTER ANGOLA</title>
     <style>
         body {
             margin: 0;
@@ -13,7 +13,7 @@
             align-items: center;
             justify-content: flex-start;
             height: 100vh;
-            background: linear-gradient(to bottom, #3E87F3, #ffc3a0);
+            background: linear-gradient(to bottom, #6B737E, #30343F);
             font-family: Arial, sans-serif;
         }
         .user-info, .container, .values-container, .extra-values {
@@ -22,7 +22,7 @@
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 5px solid #667DCC;
+            border: 5px solid #0A0F21;
             margin-bottom: 10px;
             text-align: center;
         }
@@ -58,7 +58,7 @@
             background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 3px solid #667DCC;
+            border: 3px solid #30343F;
             color: #333;
             font-size: 20px;
             text-align: center;
@@ -74,7 +74,7 @@
         <div class="random-value" id="randomValue2">--</div>
         <div class="random-value" id="randomXValue">--</div>
     </div>
-    <iframe src="https://record.elephantbet.com/_rbXIYyWpV7z6PBA04iUMN2Nd7ZgqdRLk/1/"></iframe>
+    <iframe src="https://media1.placard.co.mz/redirect.aspx?pid=6727&bid=1708"></iframe>
     <script>
         const texts = ["POSSÍVEL AZUL", "POSSÍVEL ROXO", "POSSÍVEL ROSA"];
 
@@ -102,9 +102,10 @@
             if (selectedText === "POSSÍVEL AZUL") {
                 randomNumber = getRandomNumber(1.1, 1.99);
             } else if (selectedText === "POSSÍVEL ROXO") {
-                randomNumber = getRandomNumber(2, 9.99);
+                randomNumber = getRandomNumber(2, 5.99
+             );
             } else if (selectedText === "POSSÍVEL ROSA") {
-                randomNumber = getRandomNumber(10, 10.99);
+                randomNumber = getRandomNumber(6, 10.99);
             }
             document.getElementById("dynamicText").innerText = `${selectedText}`;
             document.getElementById("randomValue2").innerText = `${randomNumber}X`;
@@ -120,7 +121,7 @@
         }
 
         function changeRandomXValue() {
-            document.getElementById("randomXValue").innerText = `${getRandomNumber(1.5, 2)}X`;
+            document.getElementById("randomXValue").innerText = `${getRandomNumber(1.5, 2.50)}X`;
         }
 
         setInterval(changeText, 18000); // 16000 ms = 16 segundos

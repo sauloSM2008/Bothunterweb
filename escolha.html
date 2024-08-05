@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha a Casa de Aposta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .betting-houses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .betting-house {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .betting-house:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .betting-house img {
+            display: block;
+            width: 200px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 600px) {
+            .betting-house img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha a Casa de Aposta</h1>
+        <div class="betting-houses">
+            <div class="betting-house">
+                <a href="moz.html">
+                    <img src="ele.jpeg" alt="Casa de Aposta 1">
+                </a>
+            </div>
+            <div class="betting-house">
+                <a href="plamoz.html">
+                    <img src="pla.png" alt="Casa de Aposta 2">
+                </a>
+            </div>
+            <div class="betting-house">
+                <a href="ola.html">
+                    <img src="ola.png" alt="Casa de Aposta 3">
+                </a>
+            </div>
+            <!-- Adicione mais casas de apostas conforme necessário -->
+        </div>
+    </div>
+</body>
+</html>
