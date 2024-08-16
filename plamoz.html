@@ -63,6 +63,44 @@
             font-size: 20px;
             text-align: center;
         }
+        
+        #reg {
+          background: black;
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
+          width: 100%;
+          padding: 20px;
+          text-align: center;
+          border-radius: 50px;
+          border: none;
+        }
+        
+        #reg:houver {
+          transform: scale(1.05);
+        }
+        
+        #dialog {
+          background: #292727;
+          transform: translate(-50%, -50%);
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          text-align: center;
+          color: white;
+          border-radius: 8px;
+          display: block;
+          width: 80%;
+        }
+        
+        #bt {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background: #CC7C7C;
+          border-radius: 8px;
+        }
+          
     </style>
 </head>
 <body>
@@ -75,6 +113,14 @@
         <div class="random-value" id="randomXValue">--</div>
     </div>
     <iframe src="https://media1.placard.co.mz/redirect.aspx?pid=6727&bid=1708"></iframe>
+    
+    <button  onclick="pla()" id="reg">REGISTAR-SE</button>
+         <div id="dialog">
+       <h style="font-weight: bold; font-size: 20px">REGISTRO</h>
+       <p>faça registro clicando em registrar-se a baixo, e faça no mínimo deposito de 100MT para que o bot seja ativo para vc e acerte, sempre jogue nessa conta para que tenhas a chance de ganhar até 1 milhão</p>
+       <button id="bt">OKY</button>
+       
+     </div>
     <script>
         const texts = ["POSSÍVEL AZUL", "POSSÍVEL ROXO", "POSSÍVEL ROSA"];
 
@@ -127,6 +173,17 @@
         setInterval(changeText, 18000); // 16000 ms = 16 segundos
         setInterval(changePercentage, 18000); // 16000 ms = 16 segundos
         setInterval(changeRandomXValue, 18000); // 16000 ms = 16 segundos
+        
+        function pla(){
+          window.open("https://media1.placard.co.mz/redirect.aspx?pid=6727&bid=1708")
+        }
+        document.getElementById("bt").addEventListener("click",
+          function() {
+            document.getElementById("dialog").style.display = "none"
+            document.getElementById("bt").style.display = "none"
+          }
+        
+        )
     </script>
 </body>
 </html>
