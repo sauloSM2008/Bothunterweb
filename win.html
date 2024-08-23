@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOT HUNTER ANGOLA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background: linear-gradient(to bottom, #6B737E, #30343F);
+            font-family: Arial, sans-serif;
+        }
+        .user-info, .container, .values-container, .extra-values {
+            width: calc(100% - 20px);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 5px solid #0A0F21;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .text, .percentage-text {
+            font-size: 24px;
+            color: #333;
+        }
+        .percentage-text {
+            color: #fff;
+            background-color: rgba(0, 255, 0, 0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 100px); /* Ajusted height to fit below the text containers */
+            border: none;
+            border-radius: 0 0 10px 10px;
+        }
+        .values-container, .extra-values {
+            display: flex;
+            justify-content: space-between;
+        }
+        .values-container .random-value, .extra-values .random-x-value {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 3px solid #30343F;
+            color: #333;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #reg {
+          background: black;
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
+          width: 100%;
+          padding: 20px;
+          text-align: center;
+          border-radius: 50px;
+          border: none;
+        }
+        
+        #reg:houver {
+          transform: scale(1.05);
+        }
+        
+        #dialog {
+          background: #292727;
+          transform: translate(-50%, -50%);
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          text-align: center;
+          color: white;
+          border-radius: 8px;
+          display: block;
+          width: 80%;
+        }
+        
+        #bt {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background: #CC7C7C;
+          border-radius: 8px;
+        }
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text" id="dynamicText">CALCULANDO...</div>
+    </div>
+    <div class="values-container" id="valuesContainer">
+        <div class="random-value" id="percentageText">--</div>
+        <div class="random-value" id="randomValue2">--</div>
+        <div class="random-value" id="randomXValue">--</div>
+    </div>
+    <iframe src="https://track.africabetpartners.com/visit/?bta=36968&nci=6278"></iframe>
+
+       
+     </div>
+    <script>
+        const texts = ["POSSÍVEL AZUL", "POSSÍVEL ROXO", "POSSÍVEL ROSA"];
+
+        function getRandomNumber(min, max) {
+            return (Math.random() * (max - min) + min).toFixed(2);
+        }
+
+        function changeText() {
+            // Aqui, ajustamos a distribuição dos índices para reduzir a probabilidade de "POSSÍVEL ROSA"
+            const probabilities = [0.6, 0.35, 0.05]; // 60% para "POSSÍVEL AZUL", 35% para "POSSÍVEL ROXO", 5% para "POSSÍVEL ROSA"
+            const random = Math.random();
+            let cumulative = 0;
+            let selectedIndex;
+
+            for (let i = 0; i < probabilities.length; i++) {
+                cumulative += probabilities[i];
+                if (random < cumulative) {
+                    selectedIndex = i;
+                    break;
+                }
+            }
+
+            const selectedText = texts[selectedIndex];
+            let randomNumber;
+            if (selectedText === "POSSÍVEL AZUL") {
+                randomNumber = getRandomNumber(1.1, 1.99);
+            } else if (selectedText === "POSSÍVEL ROXO") {
+                randomNumber = getRandomNumber(2, 5.99
+             );
+            } else if (selectedText === "POSSÍVEL ROSA") {
+                randomNumber = getRandomNumber(6, 10.99);
+            }
+            document.getElementById("dynamicText").innerText = `${selectedText}`;
+            document.getElementById("randomValue2").innerText = `${randomNumber}X`;
+        }
+
+        function getRandomPercentage(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function changePercentage() {
+            const randomPercentage = getRandomPercentage(30, 86);
+            document.getElementById("percentageText").innerText = `${randomPercentage}%`;
+        }
+
+        function changeRandomXValue() {
+            document.getElementById("randomXValue").innerText = `${getRandomNumber(1.5, 2.50)}X`;
+        }
+
+        setInterval(changeText, 18000); // 16000 ms = 16 segundos
+        setInterval(changePercentage, 18000); // 16000 ms = 16 segundos
+        setInterval(changeRandomXValue, 18000); // 16000 ms = 16 segundos
+        
+        
+        
+    </script>
+</body>
+</html>
