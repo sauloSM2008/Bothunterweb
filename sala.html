@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  body {
+    background: #727699;
+  }
+  
+  #container {
+    background: #FAFAFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+ 
+  
+  #ca {
+    font-size: 20px;
+    color: #36363A;
+    text-align: center;
+    
+  }
+  
+  .cent  {
+    text-align: center;
+  }
+  
+  #hr {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .container {
+    background: #E7E8F4;
+    margin-top: 10px;
+    text-align: center;
+    height: 200px;
+    border-radius: 8px;
+  }
+  
+  button {
+    background: #B8BCE8;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+   height: 50px;
+    width: 150px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  div {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+  }
+  
+  #img {
+    left: 100;
+    background: white;
+    height: 150px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+  }
+  
+  #star {
+    font-weight: bold;
+    
+  }
+</style>
+
+<body>
+  
+  <img id="img" src="img2.png">
+  
+  <div id="container">
+    <h1 id="ca" class="cent">🔯SINAIS K-BOT</h1>
+    <p class="cent">SINAIS 100% ACERTIVO</p>
+    <p id="apo">ABAIXO DE 2.00X</p>
+    <p id="sai">SAIR EM 2.00X</p>
+    <p id="prote">PROTEÇÃO 1.50X</p>
+    <p id="hora">SINAL OBTIDO 00:00:00</p>
+   
+  </div>
+   <center><button id="star" onclick="pause()"><b>PAUSAR SINAL</b></button></center>
+  <div class="container">
+    <button><b onclick="btn1()">MELHORES CASAS</b></button>
+    <button><b onclick="btn2()">SUPORTE K-BOT</b></button>
+    <button><b onclick="btn3()">REPORTAR BUG</b></button>
+    <button><b onclick="btn4()">MEU PRÓPRIO BOT</b></button>
+  </div>
+  
+  
+  
+
+<script>
+
+function btn1() {
+  window.open("https://saulosm2008.github.io/Site-karger/")
+}
+function btn2() {
+  window.open("https://wa.me/258878530996?text=Desejo uma ajuda no bot")
+}
+function btn3() {
+  window.open("https://wa.me/258878530996?text=Notei um erro no bot")
+}
+function btn4() {
+  window.open("https://wa.me/258878530996?text=Desejo solicitar a criança do meu bot web por 500MT")
+}
+
+let apos;
+let sai;
+let hora;
+let minute;
+let d;
+let second;
+
+var image = document.querySelector("#img");
+
+var imagens = [
+  "img.png",
+  "img2.png",
+  "img4.png"
+  ];
+  
+  index = 0;
+  
+  function troc() {
+    img.src = imagens[index];
+    index++;
+    
+    if(index >= imagens.length) {
+      index = 0;
+    }
+  }
+  
+  setInterval(troc, 7000);
+  
+  const texto = document.getElementById("star").textContent;
+  
+  
+  
+  const buto = document.getElementById("star");
+  
+  let start = false;
+  
+  buto.addEventListener("click", () => {
+    if(start) {
+      buto.textContent = "PAUSAR SINAL";
+      start = false;
+      clearInterval();
+    } else {
+      buto.textContent = "INICIAR SINAL";
+      start = true;
+       startInterval();
+    }
+  })
+
+
+const inter = setInterval(() => {
+  let num1 = Math.floor(Math.random() * 8) + 1 + "." + Math.floor(Math.random() * 100);
+  
+  let num3 = Math.floor(Math.random() * 1) + 1 + "." + Math.floor(Math.random() * 100);
+  
+  let num2 = Math.floor(Math.random() * 4) + 1 + "." + Math.floor(Math.random() * 99);
+  
+  apos = document.getElementById("apo").textContent = "ABAIXO DE " + num1 + "X✅";
+  
+  prote = document.getElementById("prote").textContent = "PROTEÇÃO " + num3 + "X✅";
+
+sai = document.getElementById("sai").textContent = "SAIR EM " + num2 + "X✅";
+ d = new Date();
+ hora = d.getHours();
+ minute = d.getMinutes();
+ second = d.getSeconds();
+ var hora = (hora + ":" + minute + ":" + second);
+ 
+ document.getElementById("hora").textContent = "SINAIL OBTIDO " + hora;
+
+},30000)
+</script>
+</body>
+
+</html>
