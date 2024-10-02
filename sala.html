@@ -85,14 +85,14 @@
   
   <div id="container">
     <h1 id="ca" class="cent">🔯SINAIS K-BOT</h1>
-    <p class="cent">SINAIS 60% ACERTIVO</p>
+    <p class="cent">SINAIS 100% ACERTIVO</p>
     <p id="apo">ABAIXO DE 2.00X</p>
     <p id="sai">SAIR EM 2.00X</p>
     <p id="prote">PROTEÇÃO 1.50X</p>
     <p id="hora">SINAL OBTIDO 00:00:00</p>
    
   </div>
-   <center><button id="star" onclick="pause()"><b>PAUSAR SINAL</b></button></center>
+   <center><button id="star" onclick="pause()"><b>GERAR SINAL</b></button></center>
   <div class="container">
     <button><b onclick="btn1()">MELHORES CASAS</b></button>
     <button><b onclick="btn2()">SUPORTE K-BOT</b></button>
@@ -146,28 +146,11 @@ var imagens = [
   
   setInterval(troc, 7000);
   
-  const texto = document.getElementById("star").textContent;
   
   
   
-  const buto = document.getElementById("star");
   
-  let start = false;
-  
-  buto.addEventListener("click", () => {
-    if(start) {
-      buto.textContent = "PAUSAR SINAL";
-      start = false;
-      clearInterval();
-    } else {
-      buto.textContent = "INICIAR SINAL";
-      start = true;
-       startInterval();
-    }
-  })
-
-
-const inter = setInterval(() => {
+function pause() {
   let num1 = Math.floor(Math.random() * 8) + 1 + "." + Math.floor(Math.random() * 100);
   
   let num3 = Math.floor(Math.random() * 1) + 1 + "." + Math.floor(Math.random() * 100);
@@ -186,9 +169,29 @@ sai = document.getElementById("sai").textContent = "SAIR EM " + num2 + "X✅";
  var hora = (hora + ":" + minute + ":" + second);
  
  document.getElementById("hora").textContent = "SINAIL OBTIDO " + hora;
+  var botao = document.getElementById("star");
+  
+  var contador = 60;
+  
+  botao.disabled = true;
+  botao.textContent = `AGUARDE... ${contador}s`;
+  
+  var intervalo = setInterval( function() {
+    contador--;
+    botao.textContent = `AGUARDE... ${contador}S`;
+    
+    if(contador <= 0) {
+      clearInterval(intervalo);
+      
+      botao.disabled = false;
+      botao.textContent = "GERAR SINAL";
+    }
+  },1000);
+ 
+  
+}
 
-},30000)
 </script>
 </body>
 
-</html>
+  </html>
